@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="facebook_button">#5252a8</color>
+    <color name="facebook_button_pressed">#4b4b95</color>
+
+    <color name="common_action_button">#6c6caf</color>
+    <color name="common_action_button_pressed">#5e5e9e</color>
+
+    <color name="common_list_item_bg">#22c6c6ff</color>
+    <color name="common_list_item_bg_pressed">#44c6c6ff</color>
+
+    <!-- Login -->
+    <color name="login_input_bg">#45474a</color>
+
+    <!-- Side Bar -->
+    <color name="sidebar_highlight">#c6c6ff</color>
+    <color name="sidebar_highlight_alpha">#22c6c6ff</color>
+    <color name="sidebar_separator">#8f8fbc</color>
+
+    <!-- ToolBar -->
+    <color name="toolbar_bg">#cc000000</color>
+
+    <!-- Nearby -->
+    <color name="nearby_venue_title_bg">#cc2e2b3f</color>
+
+    <!-- Event Details -->
+    <color name="event_detail_bg">#cc1c1c22</color>
+    <color name="event_detail_description_bg">#cc393945</color>
+
+    <!-- Search Venues -->
+    <color name="search_background">#45458a</color>
+
+    <color name="venue_title_highlight">#8f8fbc</color>
+
+    <!-- Settings -->
+    <color name="setting_item_bg">#cc595961</color>
+    <color name="setting_item_bg_pressed">#cc6c6c74</color>
+    
+    <!-- Artist -->
+    <color name="artist_live_event_bg">#ee3c3c65</color>
+    <color name="artist_name">#e1e1e2</color>
+    <color name="artist_style">#b3b3df</color>
+
+    <color name="artist_info_item_brief">#a0a0c1</color>
+    <color name="artist_info_separator">#71719a</color>
+
+    <color name="artist_event_bg">#282831</color>
+    <color name="artist_event_bg_highlight">#40404e</color>
+    <color name="artist_event_mask_bg">#cc000000</color>
+    <color name="artist_event_date_bg">#ccaaa0b1</color>
+    <color name="artist_event_time_bg">#ee1d1920</color>
+    <color name="artist_event_separator">#50505b</color>
+
+    <color name="artist_event_place_address">#9797b6</color>
+    <color name="artist_event_place_ticket">#7b7b94</color>
+
+
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="black">#000000</color>
+
+</resources>

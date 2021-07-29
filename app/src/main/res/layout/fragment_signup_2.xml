@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <!-- First Name -->
+
+    <EditText
+        android:id="@+id/etFirstName"
+        style="@style/login_input_box"
+        android:hint="@string/firstname" />
+
+    <!-- Last Name -->
+
+    <EditText
+        android:id="@+id/etLastName"
+        style="@style/login_input_box"
+        android:hint="@string/lastname" />
+
+    <!-- Photo -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_large_label" />
+
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="@dimen/user_image_size"
+            android:layout_height="@dimen/user_image_size"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+    <!-- Register -->
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/login_action_button"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/register" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have account?"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_large_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/login"
+            android:textColor="@color/sidebar_highlight"
+            android:textSize="@dimen/common_large_label" />
+    </LinearLayout>
+</LinearLayout>

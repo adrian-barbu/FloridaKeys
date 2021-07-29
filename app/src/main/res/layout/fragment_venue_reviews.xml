@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <!-- Image -->
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_image_height"
+        android:scaleType="centerCrop" />
+
+    <!-- Review Part -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAddReview"
+        android:layout_below="@+id/ivImage">
+
+        <LinearLayout
+            android:id="@+id/layoutOveralRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvOveralRating"
+                style="@style/venue_overal_rating"
+                android:text="@string/venue_overal_rating" />
+
+            <!-- Rating -->
+
+            <RatingBar
+                android:id="@+id/rbOveralRating"
+                style="@style/venue_rating_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layoutOveralRating"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/artist_info_separator"
+            android:orientation="horizontal" />
+
+        <!-- Review List -->
+
+        <com.floridakeys.ui.control.LoadMoreListView
+            android:id="@+id/lvReviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutSeparator"
+            android:divider="@color/artist_info_separator"
+            android:dividerHeight="0dp"
+            android:padding="10dp" />
+
+        <!-- Loading -->
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/loading_layout" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Add Review Button -->
+
+    <Button
+        android:id="@+id/btnAddReview"
+        style="@style/common_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_rect_button_state"
+        android:padding="10dp"
+        android:text="@string/venue_add_review"
+        android:textAllCaps="false" />
+</RelativeLayout>

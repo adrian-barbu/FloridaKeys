@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sideMenuOffset">240dp</dimen>
+
+    <dimen name="user_image_size">70dp</dimen>
+
+    <!-- Common Labels -->
+    <dimen name="common_label">13sp</dimen>
+    <dimen name="small_label">11sp</dimen>
+    <dimen name="common_middle_label">15sp</dimen>
+    <dimen name="common_large_label">17sp</dimen>
+    <dimen name="common_very_large_label">19sp</dimen>
+    <dimen name="common_huge_label">22sp</dimen>
+
+    <dimen name="sidebar_label">18sp</dimen>
+    <dimen name="sidebar_highlight_small_label">16sp</dimen>
+
+    <dimen name="toolbar_title">19sp</dimen>
+
+    <!-- Action Buttons -->
+    <dimen name="action_button_radius">5dip</dimen>
+
+    <!-- NearBy -->
+    <dimen name="nearby_venue_title">19sp</dimen>
+
+    <!-- Event Details -->
+    <dimen name="event_image_height">250dp</dimen>
+
+    <!-- Search Venues -->
+    <dimen name="list_item_image_size">90dp</dimen>
+
+    <!-- Artist Event -->
+    <dimen name="artist_image_height">250dp</dimen>
+    <dimen name="event_item_height">120dp</dimen>
+
+    <!-- Venue Summary -->
+    <dimen name="venue_summary_image_height">200dp</dimen>
+</resources>

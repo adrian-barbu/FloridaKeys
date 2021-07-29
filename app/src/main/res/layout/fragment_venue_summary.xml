@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/venue_summary_image_height">
+
+        <!-- Image -->
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvLiveEvent"
+            style="@style/artist_summary_live_event"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="false"
+            android:background="@color/artist_live_event_bg"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="Open Tomorrow at 10:00 PM" />
+
+    </RelativeLayout>
+
+    <!-- Contents -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTop">
+
+        <!-- Contents -->
+
+        <RelativeLayout
+            android:id="@+id/layoutContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <!-- Venue Information Items -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutLiveEvent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <!-- Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include layout="@layout/fragment_venue_summary_info" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/artist_info_separator"
+                        android:layout_marginTop="5dp" />
+
+                    <!-- Reviews -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVenueReviews"
+                        style="@style/venue_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvVenueReview"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/venue_info_item_reviews" />
+
+                        <RatingBar
+                            android:id="@+id/rbVenueReviews"
+                            style="@style/venue_rating_review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/tvVenueReview" />
+
+                        <TextView
+                            android:id="@+id/tvVenueReviews"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/tvGoReview"
+                            android:layout_toRightOf="@+id/rbVenueReviews"
+                            android:text="@string/venue_reviews" />
+
+                        <ImageView
+                            android:id="@+id/tvGoReview"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Menu -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVenueMenu"
+                        style="@style/venue_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvVenueMenu"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/venue_info_item_menus" />
+
+                        <TextView
+                            android:id="@+id/tvVenueMenuBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/toGoMenu"
+                            android:layout_toRightOf="@+id/tvVenueMenu"
+                            android:maxLines="2"
+                            android:text="@string/venue_menus" />
+
+                        <ImageView
+                            android:id="@+id/toGoMenu"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Events -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVenueEvents"
+                        style="@style/venue_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvVenueEvents"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/venue_info_item_events" />
+
+                        <TextView
+                            android:id="@+id/tvVenueEventsBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/tvGoEvents"
+                            android:layout_toRightOf="@+id/tvVenueEvents"
+                            android:text="Upcoming Events" />
+
+                        <ImageView
+                            android:id="@+id/tvGoEvents"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Specials -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVenueSpecials"
+                        style="@style/venue_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvVenueSpecials"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/venue_info_item_specials" />
+
+                        <TextView
+                            android:id="@+id/tvVenueSpecialsBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/tvGoSpecials"
+                            android:layout_toRightOf="@+id/tvVenueSpecials"
+                            android:singleLine="true"
+                            android:text="@string/venue_specials" />
+
+                        <ImageView
+                            android:id="@+id/tvGoSpecials"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <!-- Loading -->
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/loading_layout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

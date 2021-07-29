@@ -1,0 +1,472 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/venue_title_highlight</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/venue_title_highlight</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/venue_title_highlight</item>
+    </style>
+
+    <!-- Common Styles -->
+
+    <style name="common_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@mipmap/main_bg</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="common_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/common_label</item>
+    </style>
+
+    <style name="common_action_button_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/common_button_state</item>
+    </style>
+
+    <style name="common_action_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@drawable/common_button_state</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/common_label</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="common_action_button_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!-- ToolBar -->
+
+    <style name="toolbar_title" parent="common_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/toolbar_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Login -->
+
+    <style name="terms_hint_label" parent="common_label">
+        <item name="android:textSize">@dimen/common_label</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="terms_label" parent="common_label">
+        <item name="android:textSize">@dimen/common_label</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="facebook_button" parent="common_action_button_layout">
+        <item name="android:background">@drawable/facebook_button_state</item>
+    </style>
+
+    <!-- Side Bar -->
+    <style name="sidebar_label" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sidebar_label</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="sidebar_hightlight_label" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sidebar_highlight_small_label</item>
+        <item name="android:textColor">@color/sidebar_highlight</item>
+    </style>
+
+    <style name="sidebar_menu_item_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="sidebar_item_left_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="sidebar_item_right_layout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/sidebar_menu_item_state</item>
+    </style>
+
+    <style name="sidebar_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/sidebar_separator</item>
+    </style>
+
+    <!-- NearBy -->
+
+    <style name="nearby_title" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/nearby_venue_title</item>
+    </style>
+
+    <style name="nearby_artist" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+    </style>
+
+    <style name="nearby_address" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_label</item>
+    </style>
+
+    <!-- Event Details -->
+    <style name="event_date_time" parent="common_label">
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="event_detail_description" parent="common_label">
+        <item name="android:textSize">@dimen/common_middle_label</item>
+    </style>
+
+    <!-- Search Venue -->
+    <style name="search_keyword_input_box" parent="common_label">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionSearch</item>
+    </style>
+
+    <style name="search_venue_name" parent="common_label">
+        <item name="android:textColor">@color/venue_title_highlight</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="search_venue_address" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/small_label</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="search_venue_address_highlight" parent="search_venue_address">
+        <item name="android:textColor">@color/venue_title_highlight</item>
+        <item name="android:textSize">@dimen/small_label</item>
+    </style>
+
+    <!-- Settings -->
+    <style name="setting_item_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@drawable/setting_item_state</item>
+    </style>
+
+    <style name="setting_item_label" parent="common_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+    </style>
+
+    <style name="setting_item_right_label" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_label</item>
+        <item name="android:textColor">@color/venue_title_highlight</item>
+    </style>
+
+
+    <!-- Artist Summary -->
+    <style name="artist_summary_live_event" parent="common_label">
+        <item name="android:textSize">@dimen/common_label</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="artist_info_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@drawable/artist_info_item_state</item>
+    </style>
+
+    <style name="artist_name_big" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_very_large_label</item>
+        <item name="android:textColor">@color/artist_name</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="artist_type" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/artist_name</item>
+    </style>
+
+    <style name="artist_style" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/artist_style</item>
+    </style>
+
+    <style name="artist_info_item_name" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="artist_info_item_brief" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/artist_info_item_brief</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="artist_info_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/artist_info_separator</item>
+    </style>
+
+    <style name="artist_arrow">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_next_highlight</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!-- Artist Biography -->
+    <style name="artist_biography_content" parent="common_label">
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <!-- Artist Music -->
+    <style name="artist_music_item_title" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artist_style</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+    </style>
+
+    <style name="artist_music_item_duration" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/artist_style</item>
+    </style>
+
+    <style name="artist_music_item_publish" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/artist_style</item>
+    </style>
+
+    <!-- Artist Event -->
+    <style name="artist_event_item_date" parent="common_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@color/artist_event_date_bg</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="artist_event_item_time" parent="artist_event_item_date">
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@color/artist_event_time_bg</item>
+    </style>
+
+    <style name="artist_event_place_name" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="artist_event_place_address" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:textColor">@color/artist_event_place_address</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="artist_event_place_ticket" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:textColor">@color/artist_event_place_ticket</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="artist_event_item_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/artist_event_separator</item>
+    </style>
+
+    <style name="artist_event_arrow">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_next_highlight</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!-- Venue Summary -->
+
+    <style name="venue_info_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/artist_info_item_state</item>
+    </style>
+
+    <style name="venue_main_info_layout" parent="venue_info_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="venue_main_info" parent="common_label">
+        <item name="android:textColor">@color/artist_name</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="venue_summary_info_first">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="venue_summary_info_middle" parent="venue_main_info">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">6</item>
+    </style>
+
+    <style name="venue_summary_info_action_button" parent="common_action_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="venue_rating_review">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">25dip</item>
+        <item name="android:maxHeight">25dip</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">5.0</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:scaleX">0.5</item>
+        <item name="android:scaleY">0.5</item>
+    </style>
+
+    <style name="venue_overal_rating" parent="common_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+    </style>
+
+    <style name="venue_review_user_name" parent="common_label">
+        <item name="android:textSize">@dimen/common_middle_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="venue_review_user_review" parent="common_label">
+        <item name="android:textSize">@dimen/common_label</item>
+    </style>
+
+    <!-- Search -->
+    <style name="search_action_button" parent="common_action_button_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/common_very_large_label</item>
+    </style>
+
+    <style name="search_highlight_label" parent="common_label">
+        <item name="android:textSize">@dimen/common_huge_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="search_keyword_editbox" parent="common_label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+    </style>
+
+    <!-- Venue Menu -->
+    <style name="venue_menu_name" parent="common_label">
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="venue_menu_description" parent="common_label">
+        <item name="android:textSize">@dimen/common_middle_label</item>
+    </style>
+
+    <!-- Login -->
+    <style name="login_input_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/login_input_box</item>
+    </style>
+
+    <style name="login_action_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:background">@drawable/common_button_state</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/common_large_label</item>
+    </style>
+
+</resources>

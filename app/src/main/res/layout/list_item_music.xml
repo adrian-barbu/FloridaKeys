@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/artist_music_item_state">
+
+    <RelativeLayout
+        android:id="@+id/layoutContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+        <!-- Music Title -->
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/artist_music_item_title"
+            android:layout_centerVertical="true"
+            android:text="Here we are" />
+
+        <!-- Duration -->
+
+        <TextView
+            android:id="@+id/tvDuration"
+            style="@style/artist_music_item_duration"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tvPublishDate"
+            android:layout_toRightOf="@+id/tvTitle"
+            android:text="/ 7:16" />
+
+        <!-- Publish Date -->
+
+        <TextView
+            android:id="@+id/tvPublishDate"
+            style="@style/artist_music_item_publish"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ivAbout"
+            android:text="(2015)" />
+
+        <!-- About Icon -->
+
+        <ImageView
+            android:id="@+id/ivAbout"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_about" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layoutContents"
+        android:background="@color/artist_info_separator" />
+
+</RelativeLayout>

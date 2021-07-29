@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map Viewer -->
+
+    <fragment
+        android:id="@+id/mapViewer"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Venue Title -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutVenueDetail"
+        android:background="@color/nearby_venue_title_bg"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivVenuePrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/ivVenueNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_next" />
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/tvVenueTitle"
+            style="@style/nearby_title"
+            android:layout_centerInParent="true"
+            android:text="TAO NightClub" />
+
+        <!-- Map Marker Icon -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvVenueTitle"
+            android:src="@drawable/ic_venues" />
+    </RelativeLayout>
+
+    <!-- Venue Title -->
+
+    <RelativeLayout
+        android:id="@+id/layoutVenueDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/toolbar_bg"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnDetail"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:paddingLeft="7dp">
+
+            <!-- Artist Name -->
+
+            <TextView
+                android:id="@+id/tvArtistName"
+                style="@style/nearby_artist"
+                android:text="Mark Whalberg"
+                android:textStyle="bold"/>
+
+            <!-- Address -->
+
+            <TextView
+                android:id="@+id/tvAddress1"
+                style="@style/nearby_address"
+                android:text="1 Patriot Pl,"
+                android:singleLine="true"/>
+
+            <!-- Address -->
+
+            <TextView
+                android:id="@+id/tvAddress2"
+                style="@style/nearby_address"
+                android:text="Foxborough, MA 02035, USA"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDetail"
+            style="@style/common_action_button"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/nearby_venue_detail" />
+    </RelativeLayout>
+
+</RelativeLayout>

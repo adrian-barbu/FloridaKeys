@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutButtons"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_logo" />
+
+        <!-- Banner -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_banner" />
+
+    </LinearLayout>
+
+    <!-- Signup Buttons -->
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTermsHint"
+        android:orientation="vertical"
+        android:paddingBottom="60dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <!-- Facebook Button -->
+
+        <LinearLayout
+            android:id="@+id/layoutFacebookSignUp"
+            style="@style/facebook_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:onClick="onFacebookSignUp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook_mark" />
+
+            <TextView
+                style="@style/common_action_button_label"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/signup_facebook" />
+
+        </LinearLayout>
+
+        <!-- Email Sign Up -->
+
+        <LinearLayout
+            android:id="@+id/layoutEmailSignUp"
+            style="@style/common_action_button_layout"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:onClick="onEmailSignUp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_email_mark" />
+
+            <TextView
+                style="@style/common_action_button_label"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/signup_email" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Terms Hint -->
+
+    <TextView
+        android:id="@+id/tvTermsHint"
+        style="@style/terms_hint_label"
+        android:layout_above="@+id/tvTerms"
+        android:layout_marginBottom="5dp"
+        android:text="@string/terms_conditions_hint" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        style="@style/terms_label"
+        android:layout_alignParentBottom="true"
+        android:text="@string/terms_conditions" />
+</RelativeLayout>

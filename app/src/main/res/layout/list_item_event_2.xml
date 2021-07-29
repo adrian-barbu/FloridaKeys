@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/artist_event_item_state"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/artist_event_item_separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Left Part -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/ivRightArrow">
+
+                <!-- Place Name -->
+
+                <TextView
+                    android:id="@+id/tvPlaceName"
+                    style="@style/artist_event_place_name"
+                    android:text="TAO Club" />
+
+                <!-- Place Address -->
+
+                <TextView
+                    android:id="@+id/tvPlaceAddress"
+                    style="@style/artist_event_place_address"
+                    android:layout_below="@+id/tvPlaceName"
+                    android:layout_marginTop="5dp"
+                    android:text="Las Vegas NV" />
+
+                <!-- Place Ticket -->
+
+                <TextView
+                    android:id="@+id/tvPlaceTicket"
+                    style="@style/artist_event_place_ticket"
+                    android:layout_below="@+id/tvPlaceAddress"
+                    android:layout_marginTop="5dp"
+                    android:text="Tickets: from $25" />
+            </RelativeLayout>
+
+            <!-- Right Arrow -->
+
+            <ImageView
+                android:id="@+id/ivRightArrow"
+                style="@style/artist_event_arrow"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <!-- Right Part -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+            <!-- Image -->
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_item_height"
+                android:scaleType="centerCrop" />
+
+            <!-- Mask Layer -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/artist_event_mask_bg" />
+
+            <!-- Day & Time -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDay"
+                    style="@style/artist_event_item_date"
+                    android:singleLine="true"
+                    android:text="OCT 12" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    style="@style/artist_event_item_time"
+                    android:singleLine="true"
+                    android:text="10:00 PM" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/artist_event_item_separator" />
+</LinearLayout>

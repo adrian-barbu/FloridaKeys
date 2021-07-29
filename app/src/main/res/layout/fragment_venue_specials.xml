@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <!-- Image -->
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_image_height"
+        android:scaleType="centerCrop" />
+
+    <!-- Specials List -->
+
+    <ListView
+        android:id="@+id/lvSpecials"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivImage"
+        android:divider="@color/artist_info_separator"
+        android:dividerHeight="0dp"
+        android:padding="10dp" />
+</RelativeLayout>

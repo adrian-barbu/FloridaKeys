@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg">
+
+    <!-- Mask Layer -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutButtons"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Banner -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_banner" />
+
+        </LinearLayout>
+
+        <!-- Search Part -->
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <!-- By Current Location Buttons -->
+
+            <LinearLayout
+                android:id="@+id/layoutSearchBasedLocation"
+                style="@style/facebook_button"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mark_white" />
+
+                <TextView
+                    style="@style/search_action_button"
+                    android:text="@string/search_location_based_search" />
+
+            </LinearLayout>
+
+            <!-- Or -->
+
+            <TextView
+                style="@style/search_highlight_label"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/search_or" />
+
+            <!-- Enter Name Part -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_search_white" />
+
+                <EditText
+                    android:id="@+id/etKeyword1"
+                    style="@style/search_keyword_editbox"
+                    android:hint="@string/search_hint1" />
+
+            </LinearLayout>
+
+            <!-- Separator -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <!-- Enter City, State or ZipCode Part -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_mark_white" />
+
+                <EditText
+                    android:id="@+id/etKeyword2"
+                    style="@style/search_keyword_editbox"
+                    android:hint="@string/search_hint2" />
+
+            </LinearLayout>
+
+            <!-- Separator -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white" />
+
+            <!-- Submit -->
+
+            <LinearLayout
+                android:id="@+id/layoutSearchBasedKeyword"
+                style="@style/common_action_button_layout"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <TextView
+                    style="@style/search_action_button"
+                    android:text="@string/search_submit" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sidebar_bg"
+    android:orientation="vertical">
+
+    <!-- Top Bar -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- User Image -->
+
+        <ImageView
+            android:layout_width="@dimen/user_image_size"
+            android:layout_height="@dimen/user_image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile" />
+
+        <!-- Name -->
+
+        <TextView
+            style="@style/sidebar_label"
+            android:layout_marginTop="10dp"
+            android:text="Alejandro Lopez" />
+
+        <!-- City -->
+
+        <TextView
+            style="@style/sidebar_hightlight_label"
+            android:text="Mexico, Mexico" />
+
+    </LinearLayout>
+
+    <!-- Bottom Bar -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <!-- Top Category -->
+
+        <TextView
+            style="@style/sidebar_label"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/sidebar_menu" />
+
+        <!-- NearBy -->
+
+        <!--
+        <LinearLayout style="@style/sidebar_menu_item_layout">
+
+            <ImageView
+                style="@style/sidebar_item_left_layout"
+                android:src="@drawable/ic_nearby" />
+
+            <LinearLayout
+                android:id="@+id/itemNearBy"
+                style="@style/sidebar_item_right_layout"
+                android:onClick="onSideBarClick">
+
+                <TextView
+                    style="@style/sidebar_label"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sidebar_nearby" />
+
+                <LinearLayout style="@style/sidebar_separator" />
+            </LinearLayout>
+
+        </LinearLayout>
+        -->
+
+        <!-- Events -->
+
+        <LinearLayout style="@style/sidebar_menu_item_layout">
+
+            <ImageView
+                style="@style/sidebar_item_left_layout"
+                android:src="@drawable/ic_nearby" />
+
+            <LinearLayout
+                android:id="@+id/itemEvents"
+                style="@style/sidebar_item_right_layout"
+                android:onClick="onSideBarClick">
+
+                <TextView
+                    style="@style/sidebar_label"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sidebar_events" />
+
+                <LinearLayout style="@style/sidebar_separator" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Venues -->
+
+        <LinearLayout
+
+            style="@style/sidebar_menu_item_layout">
+
+            <ImageView
+                style="@style/sidebar_item_left_layout"
+                android:src="@drawable/ic_venues" />
+
+            <LinearLayout
+                android:id="@+id/itemVenues"
+                style="@style/sidebar_item_right_layout"
+                android:onClick="onSideBarClick">
+
+                <TextView
+                    style="@style/sidebar_label"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sidebar_venues" />
+
+                <LinearLayout style="@style/sidebar_separator" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Artists -->
+
+        <LinearLayout style="@style/sidebar_menu_item_layout">
+
+            <ImageView
+                style="@style/sidebar_item_left_layout"
+                android:src="@drawable/ic_artists" />
+
+            <LinearLayout
+                android:id="@+id/itemArtists"
+                style="@style/sidebar_item_right_layout"
+                android:onClick="onSideBarClick">
+
+                <TextView
+                    style="@style/sidebar_label"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sidebar_artists" />
+
+                <LinearLayout style="@style/sidebar_separator" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Settings -->
+
+        <LinearLayout style="@style/sidebar_menu_item_layout">
+
+            <ImageView
+                style="@style/sidebar_item_left_layout"
+                android:src="@drawable/ic_settings" />
+
+            <LinearLayout
+                android:id="@+id/itemSettings"
+                style="@style/sidebar_item_right_layout"
+                android:onClick="onSideBarClick">
+
+                <TextView
+                    style="@style/sidebar_label"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/sidebar_settings" />
+
+                <LinearLayout style="@style/sidebar_separator" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

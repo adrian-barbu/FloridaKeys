@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/artist_music_item_state">
+
+    <RelativeLayout
+        android:id="@+id/layoutContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <!-- User Image -->
+
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile" />
+
+        <!-- User Name -->
+
+        <TextView
+            android:id="@+id/tvUserName"
+            style="@style/venue_review_user_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/ratingBar"
+            android:layout_toRightOf="@+id/ivUserImage"
+            android:text="George White" />
+
+        <!-- Review -->
+
+        <TextView
+            android:id="@+id/tvReview"
+            style="@style/venue_review_user_review"
+            android:layout_alignLeft="@+id/tvUserName"
+            android:layout_below="@+id/tvUserName"
+            android:layout_marginTop="5dp"
+            android:text="Nice place, need to improve customer service. I had to request serveral times a waiter to get a drink" />
+
+        <!-- Rating -->
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/venue_rating_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:progressDrawable="@drawable/rating_bar_white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layoutContents"
+        android:background="@color/artist_info_separator" />
+</RelativeLayout>

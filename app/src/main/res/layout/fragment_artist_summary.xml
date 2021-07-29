@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/artist_image_height">
+
+        <!-- Image -->
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <!-- Live Event -->
+
+        <RelativeLayout
+            android:id="@+id/layoutLiveEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/artist_live_event_bg"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvLiveEvent"
+                style="@style/artist_summary_live_event"
+                android:layout_toLeftOf="@+id/btnEventDetails"
+                android:singleLine="true"
+                android:text="LIVE Tomorrow at Tao Club" />
+
+            <Button
+                android:id="@+id/btnEventDetails"
+                style="@style/common_action_button"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/artist_event_details" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Contents -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTop">
+
+        <!-- Contents -->
+
+        <RelativeLayout
+            android:id="@+id/layoutContents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <!-- Artist Information Items -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <!-- Artist Name & Style -->
+
+                    <RelativeLayout style="@style/artist_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvArtistName"
+                            style="@style/artist_name_big"
+                            android:text="Mark Whalberg" />
+
+                        <TextView
+                            android:id="@+id/tvArtistType"
+                            style="@style/artist_type"
+                            android:layout_alignBaseline="@+id/tvArtistName"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvArtistName"
+                            android:text="POPULAR" />
+
+                        <TextView
+                            android:id="@+id/tvArtistStyle"
+                            style="@style/artist_style"
+                            android:layout_below="@+id/tvArtistName"
+                            android:layout_marginTop="5dp"
+                            android:text="ROCK / ALTERNATIVE" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Music -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutArtistMusic"
+                        style="@style/artist_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvArtistMusic"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/artist_info_item_music" />
+
+                        <TextView
+                            android:id="@+id/tvArtistMusicBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/tvGoMusic"
+                            android:layout_toRightOf="@+id/tvArtistMusic"
+                            android:text="@string/artist_music_tracks" />
+
+                        <ImageView
+                            android:id="@+id/tvGoMusic"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Biography -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutArtistBiography"
+                        style="@style/artist_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvArtistBiography"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/artist_info_item_biography" />
+
+                        <TextView
+                            android:id="@+id/tvArtistBiographyBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/toGoBiography"
+                            android:layout_toRightOf="@+id/tvArtistBiography"
+                            android:text="@string/artist_biography_hint" />
+
+                        <ImageView
+                            android:id="@+id/toGoBiography"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+
+                    <LinearLayout style="@style/artist_info_separator" />
+
+                    <!-- Events -->
+
+                    <RelativeLayout
+                        android:id="@+id/layoutArtistEvents"
+                        style="@style/artist_info_layout">
+
+                        <TextView
+                            android:id="@+id/tvArtistEvents"
+                            style="@style/artist_info_item_name"
+                            android:text="@string/artist_info_item_events" />
+
+                        <TextView
+                            android:id="@+id/tvArtistEventsBrief"
+                            style="@style/artist_info_item_brief"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toLeftOf="@+id/tvGoEvents"
+                            android:layout_toRightOf="@+id/tvArtistEvents"
+                            android:text="@string/artist_events_hint" />
+
+                        <ImageView
+                            android:id="@+id/tvGoEvents"
+                            style="@style/artist_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <!-- Loading -->
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/loading_layout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

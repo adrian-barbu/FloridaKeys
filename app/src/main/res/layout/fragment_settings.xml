@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <!-- Setting Status -->
+
+    <RelativeLayout
+        style="@style/setting_item_layout"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/setting_item_label"
+            android:layout_toLeftOf="@+id/tvStatusActive"
+            android:text="@string/setting_status" />
+
+        <TextView
+            android:id="@+id/tvStatusActive"
+            style="@style/setting_item_right_label"
+            android:layout_toLeftOf="@+id/ivStatusArrow"
+            android:text="@string/setting_activie" />
+
+        <ImageView
+            android:id="@+id/ivStatusArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_next_highlight" />
+    </RelativeLayout>
+
+    <!-- Setting Detail -->
+
+    <RelativeLayout
+        style="@style/setting_item_layout"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            style="@style/setting_item_label"
+            android:layout_toLeftOf="@+id/ivDetailArrow"
+            android:text="@string/setting_detail" />
+
+
+        <ImageView
+            android:id="@+id/ivDetailArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_next_highlight" />
+    </RelativeLayout>
+
+    <!-- Setting On -->
+
+    <RelativeLayout
+        style="@style/setting_item_layout"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            style="@style/setting_item_label"
+            android:layout_toLeftOf="@+id/switchSettingOn"
+            android:text="@string/setting_on" />
+
+        <!-- Switch Control -->
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switchSettingOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:theme="@style/AppTheme"
+            app:theme="@style/AppTheme" />
+    </RelativeLayout>
+</LinearLayout>

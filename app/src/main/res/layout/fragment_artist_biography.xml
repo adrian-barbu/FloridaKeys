@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <!-- Image -->
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_image_height"
+        android:scaleType="centerCrop" />
+
+    <!-- Contents -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivImage">
+
+        <TextView
+            android:id="@+id/tvArtistName"
+            style="@style/artist_name_big"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:text="Mark Robert Michael Wahlberg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvArtistName"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tvBiography"
+                style="@style/artist_biography_content"
+                android:text="LIVE Tomorrow at Tao Club" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

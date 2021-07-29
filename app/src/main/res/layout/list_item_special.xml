@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/artist_music_item_state"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <!-- Name -->
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/venue_menu_name"
+            android:text="George White" />
+
+        <!-- Description -->
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/venue_menu_description"
+            android:layout_marginTop="5dp"
+            android:text="Nice place, need to improve customer service. I had to request serveral times a waiter to get a drink" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/artist_info_separator" />
+</LinearLayout>

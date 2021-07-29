@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">FloaridaKeys</string>
+
+    <!-- Login -->
+    <string name="signup_facebook">Sign up with Facebook</string>
+    <string name="signup_hint">We will never post anything without your permission</string>
+
+    <string name="signup_email">Sign up with Email</string>
+
+    <string name="terms_conditions_hint">By registering, you agree with <b>Florida Keys</b></string>
+    <string name="terms_conditions"><u>Terms of Service and Privacy Policy</u></string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm Password</string>
+
+    <string name="login">Login</string>
+    <string name="continu">Continue</string>
+
+    <string name="register"><u>Register</u></string>
+
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="photo">Your Photo</string>
+
+    <!-- SideBar -->
+    <string name="sidebar_menu">Menu</string>
+    <string name="sidebar_events">Events</string>
+    <string name="sidebar_venues">Venues</string>
+    <string name="sidebar_artists">Artists</string>
+    <string name="sidebar_nearby">Nearby</string>
+    <string name="sidebar_settings">Settings</string>
+
+    <string name="loading">Loading ...</string>
+
+    <!-- NearBy -->
+    <string name="nearby_venue_detail">Event Details</string>
+
+    <!-- Event Details -->
+    <string name="buy_ticket">Buy Ticket</string>
+    <string name="directions">Directions</string>
+
+    <!-- Search Venues -->
+    <string name="search_hint">Search</string>
+    <string name="venue_detail">View</string>
+    <string name="away">Miles Away</string>
+    <string name="address">Address</string>
+
+    <!-- Search Artists -->
+    <string name="artist_follow">Follow</string>
+
+    <!-- Settings -->
+    <string name="setting_status">Setting Status</string>
+    <string name="setting_detail">Setting Detail</string>
+    <string name="setting_activie">Active</string>
+    <string name="setting_on">Setting On</string>
+
+    <!-- Artist -->
+    <string name="artist_info_title">About This Artist</string>
+
+    <string name="artist_event_details">View Event Details</string>
+    <string name="artist_info_item_music">Music</string>
+    <string name="artist_info_item_biography">Biography</string>
+    <string name="artist_info_item_events">Events</string>
+
+    <string name="artist_music_tracks">Tracks Available</string>
+    <string name="artist_biography_hint">Know your Artist</string>
+    <string name="artist_events_hint">Upcoming Events : </string>
+
+    <string name="artist_events_ticket">Tickets:</string>
+
+    <!-- Venue -->
+    <string name="venue_info_title">About This Place</string>
+
+    <string name="venue_info_item_reviews">Reviews</string>
+    <string name="venue_info_item_menus">Menu</string>
+    <string name="venue_info_item_events">Events</string>
+    <string name="venue_info_item_specials">Specials</string>
+
+    <string name="venue_directions">Directions</string>
+    <string name="venue_call">Call</string>
+    <string name="venue_visit">Visit</string>
+
+    <string name="venue_reviews">Reviews</string>
+    <string name="venue_menus">$$$ Beer from $6.00, Wine from $10.00</string>
+    <string name="venue_events">May / 01 - Enrique Iglesias</string>
+    <string name="venue_specials">Happy Hour - Mon-Fri 6.00 to 9.00</string>
+
+    <string name="venue_overal_rating">Overal Rating </string>
+    <string name="venue_add_review">Add a Review</string>
+    <string name="venue_contact_us">Contact Us</string>
+
+    <!-- Search -->
+    <string name="search_title">Search</string>
+    <string name="search_location_based_search">By current location</string>
+    <string name="search_submit">Submit</string>
+    <string name="search_hint1">Enter Venue or Musician Name</string>
+    <string name="search_hint2">Enter City, State or Zipcode</string>
+    <string name="search_or">Or</string>
+
+    <!-- List String -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+    <!-- GPS Warning String -->
+    <string name="request_gps_enable">Please enable your GPS function to get more useful informations.</string>
+
+    <!-- Warning String -->
+    <string name="warning_no_artist_musics">There isn\'t musics.</string>
+    <string name="warning_no_venue_reviews">There isn\'t reviews.</string>
+    <string name="warning_no_venue_menus">There isn\'t menus.</string>
+    <string name="warning_no_venue_specials">There isn\'t specials.</string>
+
+    <string name="error_no_buy_ticket_link">There isn\'t link to buy ticket.</string>
+
+    <string name="no_venue_menus">No menus.</string>
+    <string name="no_venue_specials">No specials.</string>
+
+</resources>

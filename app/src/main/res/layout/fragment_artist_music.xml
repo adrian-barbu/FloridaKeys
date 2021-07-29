@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout">
+
+    <!-- Image -->
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_image_height"
+        android:scaleType="centerCrop" />
+
+    <!-- Music List -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImage">
+
+        <!-- Music List -->
+
+        <com.floridakeys.ui.control.LoadMoreListView
+            android:id="@+id/lvMusics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/artist_info_separator"
+            android:dividerHeight="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <!-- Loading -->
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/loading_layout" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

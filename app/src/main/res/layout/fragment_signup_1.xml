@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_layout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <!-- Email -->
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/login_input_box"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Password -->
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/login_input_box"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <!-- Confirm Password -->
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        style="@style/login_input_box"
+        android:hint="@string/password_confirm"
+        android:inputType="textPassword" />
+
+    <!-- Confirm -->
+
+    <Button
+        android:id="@+id/btnContinue"
+        style="@style/login_action_button"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/continu" />
+
+    <!-- Signup Warning -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have account?"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_large_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/login"
+            android:textColor="@color/sidebar_highlight"
+            android:textSize="@dimen/common_large_label" />
+    </LinearLayout>
+</LinearLayout>

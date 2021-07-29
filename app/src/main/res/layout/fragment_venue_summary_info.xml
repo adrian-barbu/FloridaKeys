@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Venue Name & Open Time -->
+
+    <RelativeLayout style="@style/venue_info_layout">
+
+        <TextView
+            android:id="@+id/tvVenueName"
+            style="@style/artist_name_big"
+            android:text="TAO Night Club" />
+
+        <TextView
+            android:id="@+id/tvVenueOpenTime"
+            style="@style/artist_style"
+            android:layout_below="@+id/tvVenueName"
+            android:layout_marginTop="5dp"
+            android:text="Thu - Sat | 10:00 PM - 5:00 AM" />
+    </RelativeLayout>
+
+    <!-- Directions -->
+
+    <LinearLayout style="@style/venue_main_info_layout">
+
+        <ImageView
+            android:id="@+id/ivMarker"
+            style="@style/venue_summary_info_first"
+            android:src="@drawable/ic_mark_filled" />
+
+        <!-- Address -->
+
+        <TextView
+            android:id="@+id/tvVenueAddress"
+            style="@style/venue_summary_info_middle"
+            android:text="3377 S Las Vegas Blvd, Las Vegas, NV 89109" />
+
+        <!-- Direction Button -->
+
+        <Button
+            android:id="@+id/btnVenueDirection"
+            style="@style/venue_summary_info_action_button"
+            android:text="@string/venue_directions" />
+
+    </LinearLayout>
+
+    <!-- Call -->
+
+    <LinearLayout
+        android:id="@+id/layoutCall"
+        style="@style/venue_main_info_layout">
+
+        <ImageView
+            android:id="@+id/ivCall"
+            style="@style/venue_summary_info_first"
+            android:src="@drawable/ic_call" />
+
+        <!-- Phone Number -->
+
+        <TextView
+            android:id="@+id/tvVenuePhoneNumber"
+            style="@style/venue_summary_info_middle"
+            android:text="+1-702-388-8338" />
+
+        <!-- Call Button -->
+
+        <Button
+            android:id="@+id/btnCall"
+            style="@style/venue_summary_info_action_button"
+            android:text="@string/venue_call" />
+
+    </LinearLayout>
+
+    <!-- Visit -->
+
+    <LinearLayout
+        android:id="@+id/layoutWebsite"
+        style="@style/venue_main_info_layout">
+
+        <ImageView
+            android:id="@+id/ivVisit"
+            style="@style/venue_summary_info_first"
+            android:src="@drawable/ic_visit" />
+
+        <!-- Site Address -->
+
+        <TextView
+            android:id="@+id/tvVenueSite"
+            style="@style/venue_summary_info_middle"
+            android:text="www.taolasvegas.com" />
+
+        <!-- Visit Button -->
+
+        <Button
+            android:id="@+id/btnVisit"
+            style="@style/venue_summary_info_action_button"
+            android:text="@string/venue_visit" />
+
+    </LinearLayout>
+</LinearLayout>

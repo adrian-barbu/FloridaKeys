@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <!-- Search Layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_background"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bar"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/etKeyword"
+                style="@style/search_keyword_input_box"
+                android:layout_centerInParent="true"
+                android:hint="@string/search_hint" />
+
+            <ImageView
+                android:id="@+id/ivClearKeyword"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Contents Layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Date Select Part -->
+
+        <RelativeLayout
+            android:id="@+id/layoutDateSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/ivNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_next" />
+
+            <!-- Date of Month -->
+
+            <TextView
+                android:id="@+id/tvDateMonth"
+                style="@style/nearby_title"
+                android:layout_centerInParent="true"
+                android:text="October 2015" />
+
+        </RelativeLayout>
+
+        <!-- Event List -->
+
+        <com.floridakeys.ui.control.LoadMoreListView
+            android:id="@+id/lvEvents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutDateSelect"
+            android:divider="@color/sidebar_separator"
+            android:dividerHeight="0dp" />
+
+        <!-- Loading Layout -->
+
+        <LinearLayout
+            android:id="@+id/layoutLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#22000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <include layout="@layout/loading_layout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
